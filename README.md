@@ -1,5 +1,5 @@
 # VLSI-EXP-3
-#1 SIMILATION AND IMPLEMENTATION OF MULTIPLIER 
+# SIMULATION AND IMPLEMENTATION OF MULTIPLIER 
 ## AIM :
         To simulate and synthesis multiplier using VIVADO.
 ## APPARATUS REQUIRED : VIVADO 2023.2
@@ -10,9 +10,11 @@ STEP:3 Select new source in the New Project and select Verilog Module as the Sou
 STEP:4 Type the File Name and Click Next and then finish button. Type the code and save it.<br>
 STEP:5 Select the Behavioural Simulation in the Source Window and click the check syntax.<br>
 STEP:6 Click the simulation to simulate the program and give the inputs and verify the outputs as per the truth table.
+
 ## 2 BIT MULTIPLIER :
 ![image](https://github.com/JAYASHREEER/VLSI-EXP-3/assets/166278992/a108d10b-12eb-499e-88f4-9ecc1b963b22)
-PROGRAM:
+
+## PROGRAM:
 module ha(a,b,s,carry);<br> input a,b;<br>output s,carry;<br> assign carry=a&b;<br> endmodule
 module multiplier_2(a,b,c);<br> input [1:0]a,b;<br> output [3:0]c;<br> wire w;<br> assign c[0]=a[0]&b[0];<br> ha h1(a[0]&b[1],a[1]&b[0],c[1],w);<br> ha h2(a[1]&b[1],w,c[2],c[3]);<br> endmodule
 ## OUTPUT :![image](https://github.com/JAYASHREEER/VLSI-EXP-3/assets/166278992/e5525835-3ec2-4d75-84e2-ec4d67af38e6)
@@ -25,5 +27,5 @@ module multi_4(a,b,p);<br> input[3:0]a,b;<br> output [7:0]p;<br> wire [17:1]w<br
 ## OUTPUT :
 ![image](https://github.com/JAYASHREEER/VLSI-EXP-3/assets/166278992/8e9d7a43-2b18-4b2d-af86-3f6f4a0fb946)
 
-RESULT :
+## RESULT :
 The simulate and synthesis multiplier using VIVADO is successfully verified.
